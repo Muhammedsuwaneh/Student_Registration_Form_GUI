@@ -184,11 +184,11 @@
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 434);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 440);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(467, 54);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(351, 45);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // button1
@@ -200,7 +200,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 48);
+            this.button1.Size = new System.Drawing.Size(111, 39);
             this.button1.TabIndex = 0;
             this.button1.Text = "Clear Fields";
             this.button1.UseVisualStyleBackColor = false;
@@ -213,9 +213,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(313, 3);
+            this.button2.Location = new System.Drawing.Point(237, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 48);
+            this.button2.Size = new System.Drawing.Size(111, 39);
             this.button2.TabIndex = 0;
             this.button2.Text = "Delete Student";
             this.button2.UseVisualStyleBackColor = false;
@@ -227,9 +227,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(158, 3);
+            this.button3.Location = new System.Drawing.Point(120, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 48);
+            this.button3.Size = new System.Drawing.Size(111, 39);
             this.button3.TabIndex = 0;
             this.button3.Text = "Edit Student Info";
             this.button3.UseVisualStyleBackColor = false;
@@ -239,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(835, 505);
+            this.ClientSize = new System.Drawing.Size(835, 492);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.DateOfBirth);
@@ -252,6 +252,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StudentRegistrationForm";
             this.Text = "Student Registration Form";
             this.tableLayoutPanel1.ResumeLayout(false);

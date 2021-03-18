@@ -11,10 +11,15 @@ namespace Student_Registation_Form
     /// </summary>
     public class Student
     {
+        #region Student Attributes
         public string mStudentName { get; set; }
         public string mStudentID { get; set; }
         public string mStudentAddress { get; set; }
         public DateTime mStudentDateOfBirth { get; set; }
+
+        #endregion
+
+        #region Student Constructor
         public Student(string name, string id, string address, DateTime birtdate)
         {
             this.mStudentName = name;
@@ -22,5 +27,7 @@ namespace Student_Registation_Form
             this.mStudentAddress = address;
             this.mStudentDateOfBirth = birtdate;
         }
+
+        #endregion
     }
 }

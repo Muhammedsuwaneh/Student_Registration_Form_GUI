@@ -49,14 +49,24 @@ namespace Student_Registation_Form
 
             EmptyFieldErrors();
 
-            if(!this.HasFieldError)
+            if (!this.HasFieldError)
             {
-                // add new student to student list
-                StudentList.Add(new Student(this.Fields[0].Item1.Text, this.Fields[1].Item1.Text, this.Fields[2].Item1.Text, birthdate));
+                bool studentExist = CheckIfStudentExist(Fields);
 
-                // format all inputs and display on list box
-                StudentInfo.Rows.Add(this.Fields[0].Item1.Text, this.Fields[1].Item1.Text,
-                        birthdate.ToString("MM/dd/yyyy"), this.Fields[2].Item1.Text);
+                if (studentExist)
+                {
+                    // add new student to student list
+                    StudentList.Add(new Student(this.Fields[0].Item1.Text, this.Fields[1].Item1.Text, this.Fields[2].Item1.Text, birthdate));
+
+                    // format all inputs and display on list box
+                    StudentInfo.Rows.Add(this.Fields[0].Item1.Text, this.Fields[1].Item1.Text,
+                            birthdate.ToString("MM/dd/yyyy"), this.Fields[2].Item1.Text);
+                }
+                else
+                {
+                    MessageBox.Show("The student you're trying to add already exist. Try again",
+                    "Student Exist Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             
             ClearFields();
@@ -111,6 +121,51 @@ namespace Student_Registation_Form
            }
         }
 
+        /// <summary>
+        /// Checks if a student we are registering already exists
+        /// </summary>
+        /// <param name="NewStudent"></param>
+        /// <returns></returns>
+        private bool CheckIfStudentExist(List<Tuple<TextBox, Label, Label>> NewStudent)
+        {
+            if(StudentList.Count > 0)
+            {
+                foreach (Student student in StudentList)
+                {
+                    if (student.mStudentName.ToLower() == NewStudent[0].Item1.Text.ToLower() || student.mStudentID == NewStudent[1].Item1.Text)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+
         #endregion
+
+        /// <summary>
+        /// Allows only numbers in the Student ID field
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StudentIDTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        /// <summary>
+        /// Deletes students from the lists
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

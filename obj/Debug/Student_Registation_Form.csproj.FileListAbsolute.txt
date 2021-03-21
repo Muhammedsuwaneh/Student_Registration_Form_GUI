@@ -8,3 +8,13 @@ C:\Users\PROJECT VENUS\Documents\Object Oriented Programming 2 C#\Random\Student
 C:\Users\PROJECT VENUS\Documents\Object Oriented Programming 2 C#\Random\Student_Registation_Form\obj\Debug\Student_Registation_Form.exe
 C:\Users\PROJECT VENUS\Documents\Object Oriented Programming 2 C#\Random\Student_Registation_Form\obj\Debug\Student_Registation_Form.pdb
 C:\Users\PROJECT VENUS\Documents\Object Oriented Programming 2 C#\Random\Student_Registation_Form\obj\Debug\Student_Registation_Form.StudentRegistrationForm.resources
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\bin\Debug\Student_Registation_Form.exe.config
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\bin\Debug\Student_Registation_Form.exe
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\bin\Debug\Student_Registation_Form.pdb
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\obj\Debug\Student_Registation_Form.csprojAssemblyReference.cache
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\obj\Debug\Student_Registation_Form.StudentRegistrationForm.resources
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\obj\Debug\Student_Registation_Form.Properties.Resources.resources
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\obj\Debug\Student_Registation_Form.csproj.GenerateResource.cache
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\obj\Debug\Student_Registation_Form.csproj.CoreCompileInputs.cache
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\obj\Debug\Student_Registation_Form.exe
+C:\Users\PROJECT VENUS\Documents\.Net\Windows Forms\Projects\Student_Registation_Form\obj\Debug\Student_Registation_Form.pdb

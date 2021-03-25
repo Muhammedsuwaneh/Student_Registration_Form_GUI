@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentRegistrationForm));
             this.StudentIDLabel = new System.Windows.Forms.Label();
             this.StudentIDTextBox = new System.Windows.Forms.TextBox();
             this.DateOfBirthLabel = new System.Windows.Forms.Label();
@@ -48,10 +50,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ClearListButton = new System.Windows.Forms.Button();
             this.ClearField = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.ClearListButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.StudentIDLabel.AutoSize = true;
             this.StudentIDLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentIDLabel.ForeColor = System.Drawing.Color.White;
-            this.StudentIDLabel.Location = new System.Drawing.Point(9, 131);
+            this.StudentIDLabel.Location = new System.Drawing.Point(9, 127);
             this.StudentIDLabel.Name = "StudentIDLabel";
             this.StudentIDLabel.Size = new System.Drawing.Size(86, 19);
             this.StudentIDLabel.TabIndex = 1;
@@ -69,7 +71,7 @@
             // StudentIDTextBox
             // 
             this.StudentIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.StudentIDTextBox.Location = new System.Drawing.Point(11, 153);
+            this.StudentIDTextBox.Location = new System.Drawing.Point(11, 149);
             this.StudentIDTextBox.Name = "StudentIDTextBox";
             this.StudentIDTextBox.Size = new System.Drawing.Size(351, 23);
             this.StudentIDTextBox.TabIndex = 2;
@@ -80,7 +82,7 @@
             this.DateOfBirthLabel.AutoSize = true;
             this.DateOfBirthLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateOfBirthLabel.ForeColor = System.Drawing.Color.White;
-            this.DateOfBirthLabel.Location = new System.Drawing.Point(9, 195);
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(9, 191);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
             this.DateOfBirthLabel.Size = new System.Drawing.Size(98, 19);
             this.DateOfBirthLabel.TabIndex = 1;
@@ -91,7 +93,7 @@
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddressLabel.ForeColor = System.Drawing.Color.White;
-            this.AddressLabel.Location = new System.Drawing.Point(8, 256);
+            this.AddressLabel.Location = new System.Drawing.Point(8, 252);
             this.AddressLabel.Name = "AddressLabel";
             this.AddressLabel.Size = new System.Drawing.Size(68, 19);
             this.AddressLabel.TabIndex = 1;
@@ -99,7 +101,7 @@
             // 
             // AddressTextBox
             // 
-            this.AddressTextBox.Location = new System.Drawing.Point(11, 279);
+            this.AddressTextBox.Location = new System.Drawing.Point(11, 275);
             this.AddressTextBox.Multiline = true;
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(351, 136);
@@ -108,7 +110,7 @@
             // 
             // DateOfBirth
             // 
-            this.DateOfBirth.Location = new System.Drawing.Point(11, 220);
+            this.DateOfBirth.Location = new System.Drawing.Point(11, 216);
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.Size = new System.Drawing.Size(200, 20);
             this.DateOfBirth.TabIndex = 3;
@@ -120,7 +122,7 @@
             this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RegisterButton.Location = new System.Drawing.Point(12, 435);
+            this.RegisterButton.Location = new System.Drawing.Point(12, 431);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(350, 37);
             this.RegisterButton.TabIndex = 4;
@@ -149,9 +151,12 @@
             this.ID,
             this.BirthDate,
             this.StudentAddress});
-            this.StudentInfo.Location = new System.Drawing.Point(391, 69);
+            this.StudentInfo.Location = new System.Drawing.Point(391, 77);
             this.StudentInfo.Name = "StudentInfo";
             this.StudentInfo.RowHeadersWidth = 80;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.NullValue = null;
+            this.StudentInfo.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.StudentInfo.Size = new System.Drawing.Size(482, 346);
             this.StudentInfo.TabIndex = 0;
             // 
@@ -204,7 +209,7 @@
             // StudentIDError
             // 
             this.StudentIDError.AutoSize = true;
-            this.StudentIDError.Location = new System.Drawing.Point(8, 177);
+            this.StudentIDError.Location = new System.Drawing.Point(8, 185);
             this.StudentIDError.Name = "StudentIDError";
             this.StudentIDError.Size = new System.Drawing.Size(0, 13);
             this.StudentIDError.TabIndex = 8;
@@ -213,7 +218,7 @@
             // AddressError
             // 
             this.AddressError.AutoSize = true;
-            this.AddressError.Location = new System.Drawing.Point(9, 402);
+            this.AddressError.Location = new System.Drawing.Point(9, 410);
             this.AddressError.Name = "AddressError";
             this.AddressError.Size = new System.Drawing.Size(0, 13);
             this.AddressError.TabIndex = 8;
@@ -235,7 +240,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(7, 480);
+            this.label2.Location = new System.Drawing.Point(8, 481);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 19);
             this.label2.TabIndex = 10;
@@ -252,26 +257,6 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Current Student List ";
             // 
-            // ClearListButton
-            // 
-            this.ClearListButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ClearListButton.BackColor = System.Drawing.Color.Red;
-            this.ClearListButton.FlatAppearance.BorderSize = 0;
-            this.ClearListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearListButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearListButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClearListButton.Location = new System.Drawing.Point(765, 435);
-            this.ClearListButton.Name = "ClearListButton";
-            this.ClearListButton.Padding = new System.Windows.Forms.Padding(2);
-            this.ClearListButton.Size = new System.Drawing.Size(108, 37);
-            this.ClearListButton.TabIndex = 0;
-            this.ClearListButton.TabStop = false;
-            this.ClearListButton.Text = "Clear List";
-            this.ClearListButton.UseVisualStyleBackColor = false;
-            this.ClearListButton.Click += new System.EventHandler(this.ClearAllButton_Click);
-            // 
             // ClearField
             // 
             this.ClearField.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -282,11 +267,11 @@
             this.ClearField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearField.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClearField.Location = new System.Drawing.Point(391, 435);
+            this.ClearField.Location = new System.Drawing.Point(391, 431);
             this.ClearField.Name = "ClearField";
             this.ClearField.Padding = new System.Windows.Forms.Padding(2);
             this.ClearField.Size = new System.Drawing.Size(107, 37);
-            this.ClearField.TabIndex = 0;
+            this.ClearField.TabIndex = 16;
             this.ClearField.TabStop = false;
             this.ClearField.Text = "Clear Fields";
             this.ClearField.UseVisualStyleBackColor = false;
@@ -302,11 +287,11 @@
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EditButton.Location = new System.Drawing.Point(514, 435);
+            this.EditButton.Location = new System.Drawing.Point(514, 431);
             this.EditButton.Name = "EditButton";
             this.EditButton.Padding = new System.Windows.Forms.Padding(2);
             this.EditButton.Size = new System.Drawing.Size(107, 37);
-            this.EditButton.TabIndex = 0;
+            this.EditButton.TabIndex = 17;
             this.EditButton.TabStop = false;
             this.EditButton.Text = "Edit Student Info";
             this.EditButton.UseVisualStyleBackColor = false;
@@ -322,15 +307,35 @@
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DeleteButton.Location = new System.Drawing.Point(639, 435);
+            this.DeleteButton.Location = new System.Drawing.Point(639, 431);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Padding = new System.Windows.Forms.Padding(2);
             this.DeleteButton.Size = new System.Drawing.Size(108, 37);
-            this.DeleteButton.TabIndex = 0;
+            this.DeleteButton.TabIndex = 18;
             this.DeleteButton.TabStop = false;
             this.DeleteButton.Text = "Delete Student";
             this.DeleteButton.UseVisualStyleBackColor = false;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // ClearListButton
+            // 
+            this.ClearListButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClearListButton.BackColor = System.Drawing.Color.Red;
+            this.ClearListButton.FlatAppearance.BorderSize = 0;
+            this.ClearListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearListButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearListButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClearListButton.Location = new System.Drawing.Point(765, 431);
+            this.ClearListButton.Name = "ClearListButton";
+            this.ClearListButton.Padding = new System.Windows.Forms.Padding(2);
+            this.ClearListButton.Size = new System.Drawing.Size(108, 37);
+            this.ClearListButton.TabIndex = 19;
+            this.ClearListButton.TabStop = false;
+            this.ClearListButton.Text = "Clear List";
+            this.ClearListButton.UseVisualStyleBackColor = false;
+            this.ClearListButton.Click += new System.EventHandler(this.ClearAllButton_Click);
             // 
             // StudentRegistrationForm
             // 
@@ -338,7 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(109)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(893, 510);
+            this.ClientSize = new System.Drawing.Size(893, 516);
             this.Controls.Add(this.ClearField);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.DeleteButton);
@@ -359,7 +364,8 @@
             this.Controls.Add(this.DateOfBirthLabel);
             this.Controls.Add(this.StudentIDLabel);
             this.Controls.Add(this.StudentNameLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StudentRegistrationForm";
@@ -392,10 +398,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentAddress;
-        private System.Windows.Forms.Button ClearListButton;
         private System.Windows.Forms.Button ClearField;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button ClearListButton;
     }
 }
 

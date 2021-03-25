@@ -60,8 +60,8 @@ namespace Student_Registation_Form
 
                     // format all inputs and display on list box
                     StudentInfo.Rows.Add(StudentList[StudentList.Count-1].mStudentName.ToString(), 
-                        StudentList[StudentList.Count - 1].mStudentAddress.ToString(),
-                            birthdate.ToString("MM/dd/yyyy"), StudentList[StudentList.Count - 1].mStudentID.ToString());
+                        StudentList[StudentList.Count - 1].mStudentID.ToString(),
+                            birthdate.ToString("MM/dd/yyyy"), StudentList[StudentList.Count - 1].mStudentAddress.ToString());
                 }
                 else
                 {
@@ -166,12 +166,12 @@ namespace Student_Registation_Form
         /// <param name="e"></param>
         private void StudentNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]") && !char.IsControl(e.KeyChar))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]") && !char.IsControl(e.KeyChar) && 
+                !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
-
 
         /// <summary>
         /// For Address text box to only accept numbers and alphabets
@@ -181,7 +181,7 @@ namespace Student_Registation_Form
         private void AddressTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z0-9]*$")
-                && !char.IsControl(e.KeyChar))
+                && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }

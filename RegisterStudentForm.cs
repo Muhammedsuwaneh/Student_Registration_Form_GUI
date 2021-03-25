@@ -59,8 +59,9 @@ namespace Student_Registation_Form
                     StudentList.Add(new Student(this.Fields[0].Item1.Text, this.Fields[1].Item1.Text, this.Fields[2].Item1.Text, birthdate));
 
                     // format all inputs and display on list box
-                    StudentInfo.Rows.Add(this.Fields[0].Item1.Text, this.Fields[1].Item1.Text,
-                            birthdate.ToString("MM/dd/yyyy"), this.Fields[2].Item1.Text);
+                    StudentInfo.Rows.Add(StudentList[StudentList.Count-1].mStudentName.ToString(), 
+                        StudentList[StudentList.Count - 1].mStudentAddress.ToString(),
+                            birthdate.ToString("MM/dd/yyyy"), StudentList[StudentList.Count - 1].mStudentID.ToString());
                 }
                 else
                 {
@@ -152,18 +153,86 @@ namespace Student_Registation_Form
         /// <param name="e"></param>
         private void StudentIDTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "^[0-9]") && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
 
         /// <summary>
-        /// Deletes students from the lists
+        ///  Avoids the typing of non alphabetics
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StudentNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]") && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        /// <summary>
+        /// For Address text box to only accept numbers and alphabets
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddressTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z0-9]*$")
+                && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        /// <summary>
+        /// Deletes selected student(s) from the lists
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow row in StudentInfo.SelectedRows)
+            {
+                int index = row.Index;
+
+                // remove from data grid view 
+                StudentInfo.Rows.RemoveAt(index);
+
+                // remove from list 
+                StudentList.RemoveAt(index);
+            }
+        }
+
+        /// <summary>
+        /// Deletes all students from the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClearAllButton_Click(object sender, EventArgs e)
+        {
+            if(StudentList.Count > 0)
+            {
+                // clear all students from Data Grid View
+                StudentInfo.Rows.Clear();
+
+                // refresh Data Grid View
+                StudentInfo.Refresh();
+
+                // Clear all students on list
+                StudentList.Clear();
+            }
+        }
+
+
+        /// <summary>
+        /// Edits student's info
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EditButton_Click(object sender, EventArgs e)
         {
 
         }
